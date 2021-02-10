@@ -43,3 +43,9 @@ for (let i = 0; i < 20; i++) {
 
 // Convert people array to JSON
 const peopleJSON = JSON.stringify(people);
+
+// Save JSON to file
+fs.writeFile('people.json', peopleJSON, (err) => {
+  if (err) throw Error('Something went wrong');
+  console.log('File has been successfully generated! Check people.json');
+});
