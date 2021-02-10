@@ -40,6 +40,9 @@ for (let i = 0; i < 20; i++) {
   // Generate phone number (always 9 random digits)
   identity.phone = Math.floor(100000000 + Math.random() * 900000000);
 
+  // Generate e-mail (according to the pattern "firstName.lastName@gmail.com")
+  identity.email = identity.firstName + '.' + identity.lastName + '@gmail.com';
+
   // Add identity to people array
   people.push(identity);
 }
