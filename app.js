@@ -9,3 +9,6 @@ const lastNames = ['Nowak', 'Wójcik', 'Kowalczyk', 'Woźniak', 'Mazur', 'Krawcz
 
 // Create function getting random element from the array
 const randChoice = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+// Create empty array
+const people = [];
