@@ -16,4 +16,6 @@ const people = [];
 // Create the loop with 20 iterations
 for (let i = 0; i < 20; i++) {
 
+  // Create new object
+  const identity = {};
 }
