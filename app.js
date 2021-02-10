@@ -12,6 +12,20 @@ const ageMax = 78;
 // Create function getting random element from the array
 const randChoice = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
+// Auxiliary function for creating e-mail address without Polish diacritics
+const replacePolishDiacritics = (name) => {
+  name = name.replace('ą', 'a');
+  name = name.replace('ć', 'c');
+  name = name.replace('ę', 'e');
+  name = name.replace('ł', 'l');
+  name = name.replace('ń', 'n');
+  name = name.replace('ó', 'o');
+  name = name.replace('ś', 's');
+  name = name.replace('ż', 'z');
+  name = name.replace('ź', 'z');
+  return name;
+}
+
 // Create empty array
 const people = [];
 
@@ -41,7 +55,7 @@ for (let i = 0; i < 20; i++) {
   identity.phone = Math.floor(100000000 + Math.random() * 900000000);
 
   // Generate e-mail (according to the pattern "firstName.lastName@gmail.com")
-  identity.email = identity.firstName.toLowerCase() + '.' + identity.lastName.toLowerCase() + '@gmail.com';
+  identity.email = replacePolishDiacritics(identity.firstName.toLowerCase()) + '.' + replacePolishDiacritics(identity.lastName.toLowerCase()) + '@gmail.com';
 
   // Add identity to people array
   people.push(identity);
