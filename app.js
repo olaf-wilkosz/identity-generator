@@ -21,4 +21,11 @@ for (let i = 0; i < 20; i++) {
 
   // Draw the gender and add to the object as the gender atribute
   identity.gender = randChoice(genders);
+
+  // According to the drawn gender draw the name from the correct names array and add to the object
+  if (identity.gender == 'M') {
+    identity.firstName = randChoice(maleNames);
+  } else {
+    identity.firstName = randChoice(femaleNames);
+  }
 }
