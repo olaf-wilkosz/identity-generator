@@ -28,4 +28,7 @@ for (let i = 0; i < 20; i++) {
   } else {
     identity.firstName = randChoice(femaleNames);
   }
+
+  // Draw the surname from lastNames array and add to the object
+  identity.lastName = randChoice(lastNames);
 }
