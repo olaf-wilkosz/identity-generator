@@ -18,4 +18,7 @@ for (let i = 0; i < 20; i++) {
 
   // Create new object
   const identity = {};
+
+  // Draw the gender and add to the object as the gender atribute
+  identity.gender = randChoice(genders);
 }
