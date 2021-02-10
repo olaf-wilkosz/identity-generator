@@ -36,4 +36,7 @@ for (let i = 0; i < 20; i++) {
 
   // Draw the age and add to the object
   identity.age = Math.floor(Math.random() * (ageMax - ageMin + 1)) + ageMin;
+
+    // Add identity to people array
+    people.push(identity);
 }
