@@ -12,3 +12,8 @@ const randChoice = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 // Create empty array
 const people = [];
+
+// Create the loop with 20 iterations
+for (let i = 0; i < 20; i++) {
+
+}
