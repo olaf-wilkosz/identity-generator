@@ -37,6 +37,9 @@ for (let i = 0; i < 20; i++) {
   // Draw the age and add to the object
   identity.age = Math.floor(Math.random() * (ageMax - ageMin + 1)) + ageMin;
 
+  // Generate phone number (always 9 random digits)
+  identity.phone = Math.floor(100000000 + Math.random() * 900000000);
+
   // Add identity to people array
   people.push(identity);
 }
