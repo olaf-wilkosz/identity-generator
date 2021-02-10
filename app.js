@@ -6,6 +6,8 @@ const genders = ['M', 'F'];
 const maleNames = ['Antoni', 'Jan', 'Jakub', 'Aleksander', 'Franciszek', 'Szymon', 'Filip', 'Mikołaj', 'Stanisław', 'Wojciech'];
 const femaleNames = ['Julia', 'Zuzanna', 'Zofia', 'Hanna', 'Maja', 'Lena', 'Alicja', 'Oliwia', 'Maria', 'Laura'];
 const lastNames = ['Nowak', 'Wójcik', 'Kowalczyk', 'Woźniak', 'Mazur', 'Krawczyk', 'Kaczmarek', 'Zając', 'Król', 'Wieczorek'];
+const ageMin = 18;
+const ageMax = 78;
 
 // Create function getting random element from the array
 const randChoice = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -31,4 +33,7 @@ for (let i = 0; i < 20; i++) {
 
   // Draw the surname from lastNames array and add to the object
   identity.lastName = randChoice(lastNames);
+
+  // Draw the age and add to the object
+  identity.age = Math.floor(Math.random() * (ageMax - ageMin + 1)) + ageMin;
 }
